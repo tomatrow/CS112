@@ -154,7 +154,8 @@ public class Date
 
     public String toString( )
     {
-        return (month + " " + day + ", " + year);
+        // return month + " " + day + ", " + year;
+        return "";
     }
 
     public boolean equals(Date otherDate)
@@ -171,14 +172,14 @@ public class Date
                                          && day < otherDate.day) );
     }
 
-    public void readInput( )
+    public void readInput(Scanner keyboard)
     {
         boolean tryAgain = true;
-        Scanner keyboard = new Scanner(System.in);
+
         while (tryAgain)
         {
             System.out.println("Enter month, day, and year.");
-              System.out.println("Do not use a comma.");
+            System.out.println("Do not use a comma.");
             String monthInput = keyboard.next( );
             int dayInput = keyboard.nextInt( );
             int yearInput =  keyboard.nextInt( );
