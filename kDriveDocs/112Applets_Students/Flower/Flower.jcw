@@ -1,0 +1,16 @@
+<?xml?>
+<workspace>
+	<settings>
+		<label>Flower</label>
+	</settings>
+	<users>
+		<user>
+			<path>Flower.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>Flower.jcp</path>
+		</project>
+	</projects>
+</workspace>

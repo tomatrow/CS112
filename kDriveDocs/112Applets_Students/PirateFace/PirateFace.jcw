@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>PirateFace</label>
+	</settings>
+	<users>
+		<user>
+			<path>PirateFace.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>PirateFace.jcp</path>
+		</project>
+	</projects>
+</workspace>

@@ -1,0 +1,16 @@
+<?xml?>
+<workspace>
+	<settings>
+		<label>TeddyBear</label>
+	</settings>
+	<users>
+		<user>
+			<path>TeddyBear.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>TeddyBear.jcp</path>
+		</project>
+	</projects>
+</workspace>

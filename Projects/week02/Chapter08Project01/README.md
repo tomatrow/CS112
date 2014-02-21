@@ -1,0 +1,2 @@
+In Programming Project 7.3 from Chapter 7, the Alien class was rewritten to use inheritance. The rewritten Alien class should be made abstract because there will never be a need to create an instance of it, only its derived classes. Change this to an abstract class and also make the getDamage method an abstract method. Test the class from your main method to ensure that it still operates as expected.
+

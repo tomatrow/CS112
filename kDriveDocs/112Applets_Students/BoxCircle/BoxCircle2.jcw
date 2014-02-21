@@ -1,0 +1,16 @@
+<?xml?>
+<workspace>
+	<settings>
+		<label>BoxCircle</label>
+	</settings>
+	<users>
+		<user>
+			<path>BoxCircle2.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>BoxCircle.jcp</path>
+		</project>
+	</projects>
+</workspace>

@@ -1,0 +1,16 @@
+<?xml?>
+<workspace>
+	<settings>
+		<label>ChristmasTrees</label>
+	</settings>
+	<users>
+		<user>
+			<path>ChristmasTrees.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>ChristmasTrees.jcp</path>
+		</project>
+	</projects>
+</workspace>

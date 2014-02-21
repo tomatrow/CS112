@@ -1,0 +1,16 @@
+<?xml?>
+<workspace>
+	<settings>
+		<label>AmericanFlag</label>
+	</settings>
+	<users>
+		<user>
+			<path>AmericanFlag.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>AmericanFlag.jcp</path>
+		</project>
+	</projects>
+</workspace>

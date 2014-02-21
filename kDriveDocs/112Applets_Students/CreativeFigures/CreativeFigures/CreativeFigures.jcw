@@ -1,0 +1,16 @@
+<?xml?>
+<workspace>
+	<settings>
+		<label>CreativeFigures</label>
+	</settings>
+	<users>
+		<user>
+			<path>CreativeFigures.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>CreativeFigures.jcp</path>
+		</project>
+	</projects>
+</workspace>
