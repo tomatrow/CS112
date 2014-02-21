@@ -13,7 +13,7 @@ public class Operation {
 	// Setters
 	private void setOperator(String operator) {
 		if (!(Arrays.asList(VALID_OPERATORS).contains(operator)))
-			throw new UnknownOperatorException(operator);
+			throw new UnknownOperatorException("\"" + operator + "\" is not an operator");
 		_operator = operator;
 	}
 	private void setOperands(double[] operands) {
