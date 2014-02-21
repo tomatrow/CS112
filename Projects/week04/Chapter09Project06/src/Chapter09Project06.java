@@ -1,3 +1,28 @@
+/* Chapter 09 - Project No. 02
+    File Name:          Chapter09Project06.java
+    Programmer:         Andrew Caldwell
+    Date Last Modified: Feb. 21, 2014
+
+    Problem Statement:
+	Use argument exceptions in a calculator program. 
+
+    Overall Plan
+	start
+		core loop
+			calculation loop 
+				operation
+				end
+			end
+		end
+	end
+
+    Classes needed and Purpose
+    main class - Chapter09Project06
+	Calculator - Perfroms operations on its data
+	Operation - Embodies an operation
+	UnknownOperatorException - signifies illegal operator 
+*/
+
 import java.util.Arrays;
 import java.util.regex.Pattern;
 import java.util.Scanner;
