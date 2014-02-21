@@ -28,6 +28,7 @@ import java.io.*;
 
 public class Chapter08Project06 {
 	public static Frame DEFAULT_FRAME = new Frame(10,10,new Point(10,10));
+	AJTTDrawing d;
 
 	public static void main(String[] args) {
 		Screen s = new Screen(getTerminalFrame());
@@ -114,6 +115,7 @@ public abstract class Figure {
 		System.out.println(getClass().getName() + ": " + e.getStackTrace()[1].getMethodName());
 	}
 
+	// 
 	public Point[] getCorners() {
 		Point[] array = {upperLeft(),upperRight(),lowerRight(),lowerLeft()};
 		return array;
