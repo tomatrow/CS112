@@ -23,10 +23,10 @@ function masterbuild
 			screencapture -w $BLD_DIR/$PROJECT_NAME.png 
 		end
 	else if test $argv = "init"
-		# mkdir $SRC_DIR
-		# mkdir $BLD_DIR
-		# touch README.md
-		# touch $SRC_DIR/$PROJECT_NAME.java
+		mkdir $SRC_DIR
+		mkdir $BLD_DIR
+		touch README.md
+		touch $SRC_DIR/$PROJECT_NAME.java
 	end 
 	echo $status > /dev/null # This is the only solution I found to unwanted statuses being sent to the terminal. 
 end 
