@@ -1,3 +1,25 @@
+/* Project handout 01 - Project No. 02
+    File Name:          ProjectHandout01Project02.java
+    Programmer:         Andrew Caldwell
+    Date Last Modified: Feb. 21, 2014
+
+    Problem Statement:
+	Use exceptions in a Employee recording program. 
+
+    Overall Plan
+	* Init employees array
+	* calc avg salary
+	* Print out every employee 
+
+    Classes needed and Purpose
+    main class - ProjectHandout01Project02
+	Date - time container
+	Employee - recording
+	Person - Employee superclass
+	SSNCharacterException - char exception
+	SSNLengthException - length exception
+*/
+
 import java.util.Arrays;
 import java.util.Scanner;
 
