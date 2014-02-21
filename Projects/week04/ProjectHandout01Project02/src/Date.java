@@ -155,7 +155,7 @@ public class Date
     public String toString( )
     {
         // return month + " " + day + ", " + year;
-        return "";
+        
     }
 
     public boolean equals(Date otherDate)
