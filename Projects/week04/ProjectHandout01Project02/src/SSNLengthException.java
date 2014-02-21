@@ -1,0 +1,1 @@
+public class SSNLengthException extends RuntimeException
