@@ -16,9 +16,12 @@ if test -e $SRC_DIR -a -e $BLD_DIR # make sure project is initialized
 	    java -cp $BLD_DIR:$HELPER_CLASSES_DIR $PROJECT_NAME
 	else if test $argv = "shoot"
 		screencapture -w $BLD_DIR/$PROJECT_NAME.png 
-	else if test $argv = "init"
-		mkdir $SRC_DIR
-		mkdir $BLD_DIR
-		touch README.md
 	end
+end 
+
+if test $argv = "init"
+	mkdir $SRC_DIR
+	mkdir $BLD_DIR
+	touch README.md
+	touch $SRC_DIR/$PROJECT_NAME.java
 end 
