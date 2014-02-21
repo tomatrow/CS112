@@ -11,6 +11,7 @@ public class SongException extends Exception
 	public SongException(String message)
 	{
 		super(message);
-		System.out.println("SongException invoked with an argument.");
+		System.out.println(
+		    "SongException invoked with an argument.");
 	}
 }

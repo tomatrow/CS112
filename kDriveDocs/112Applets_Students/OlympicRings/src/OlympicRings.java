@@ -40,7 +40,6 @@ public class OlympicRings extends JApplet
 	
 	public void paint (Graphics g)
 	{
-		/*
 		// draw blue ring and circle
 		g.setColor(Color.BLUE);
 		g.fillOval(blue_Ring_X,blue_Ring_Y,outer_Ring_Diameter,
@@ -49,6 +48,7 @@ public class OlympicRings extends JApplet
 		g.setColor(Color.WHITE);
 		g.fillOval(blue_Ring_X + inner_Ring_Offset,blue_Ring_Y +
 		           inner_Ring_Offset,inner_Ring_Diameter,inner_Ring_Diameter);
+		           
 		// draw yellow ring and circle
 		g.setColor(Color.YELLOW);
 		g.fillOval(yellow_Ring_X,yellow_Ring_Y,outer_Ring_Diameter,
@@ -84,7 +84,7 @@ public class OlympicRings extends JApplet
 		g.setColor(Color.WHITE);
 		g.fillOval(red_Ring_X + inner_Ring_Offset,red_Ring_Y +
 		           inner_Ring_Offset,inner_Ring_Diameter,inner_Ring_Diameter);
-		*/
+		           
 		// fill in blue arc
 		g.setColor(Color.BLUE);
 		int i;
@@ -92,13 +92,9 @@ public class OlympicRings extends JApplet
 		{
 			g.drawArc(blue_Ring_X + (i/2), blue_Ring_Y + (i/2),
 			          outer_Ring_Diameter - i, outer_Ring_Diameter - i,
-			          blue_Ring_Start_Angle /* + (i/4)*/, 75);			           
+			          blue_Ring_Start_Angle + (i/4), 75);			           
 		}
-		
-
-
-
-		/*           
+			          
 		// fill in yellow arc
 		g.setColor(Color.YELLOW);
 		for (i = 0; i <= 40; i++)
@@ -125,6 +121,5 @@ public class OlympicRings extends JApplet
 			          outer_Ring_Diameter - i, outer_Ring_Diameter - i,
 			          green_Ring_Start_Angle + (i/4), 75);
 		}			          		           		           		           		                     
-	*/
 	}
 }

@@ -2,16 +2,22 @@
 
 public class GradedActivity
 {
-	private double score;
+	private double score;       // Numeric score
 	
-	// pragma mark - accessors
-	public void setScore(double s) {
+	// The setScore method stores its argument in the score field
+	public void setScore(double s)
+	{
 		score = s;
 	}
-	public double getScore() {
+	
+	// The getScore method returns the score field
+	public double getScore()
+	{
 		return score;
 	}
 	
+	// The getGrade method returns a letter grade determined from
+	// the score field
 	public char getGrade()
 	{
 		char letterGrade;      // To hold the grade

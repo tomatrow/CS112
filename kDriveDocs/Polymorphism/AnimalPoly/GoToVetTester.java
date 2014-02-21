@@ -13,13 +13,11 @@ public class GoToVetTester
 		Dog  d = new Dog();
 		Wolf w = new Wolf();
 		Pig  p = new Pig();
-		Animal a = new Animal();
-
+		
 		// give a shot to the animal objects - do they
 		// make the right noise when they receive the shot?
 		v.giveShot(d);
 		v.giveShot(w);
 		v.giveShot(p);		    
-		v.giveShot(a);
 	}
 }

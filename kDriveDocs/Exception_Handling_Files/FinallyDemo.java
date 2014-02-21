@@ -7,7 +7,7 @@ public class FinallyDemo
 	{
 		try
 		{
-			myMethod(-10);
+			myMethod(0);
 		}
 		
 		catch(Exception e)

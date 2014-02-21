@@ -13,23 +13,28 @@ public class JOptionPaneException
 		
 		try
 		{
-			inpStr = JOptionPane.showInputDialog("Enter the dividend: ");
+			inpStr =
+			     JOptionPane.showInputDialog("Enter the dividend: ");
 			dividend = Integer.parseInt(inpStr);
 			
-			inpStr = JOptionPane.showInputDialog("Enter the divisor: ");
+			inpStr =
+			     JOptionPane.showInputDialog("Enter the divisor: ");
 			divisor = Integer.parseInt(inpStr);
 			
-			quotient = dividend / divisor;
+			quotient = dividend/ divisor;
 			
 			JOptionPane.showMessageDialog(null,
-			     "\nDividend = " + dividend + "\nDivisor= " + divisor + "\nQuotient = " + quotient,
+			     "\nDividend = " + dividend
+			     + "\nDivisor= " + divisor
+			     + "\nQuotient = " + quotient,
 			     "Quotient",JOptionPane.INFORMATION_MESSAGE);
 	     }
 			     
 		 catch (ArithmeticException aeRef)
 		 {
 			JOptionPane.showMessageDialog(null,
-				 "Exception " + aeRef.toString(),
+				 "Exception "
+				 + aeRef.toString(),
 				 "ArithmeticException",
 				 JOptionPane.ERROR_MESSAGE);
 		 }
@@ -37,7 +42,8 @@ public class JOptionPaneException
 		 catch (NumberFormatException nfeRef)
 		 {
 			JOptionPane.showMessageDialog(null,
-				 "Exception " + nfeRef.toString(),
+				 "Exception "
+				 + nfeRef.toString(),
 				 "NumberFormatException",
 				 JOptionPane.ERROR_MESSAGE);
 		 }
