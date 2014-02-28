@@ -6,7 +6,9 @@ import java.util.Arrays;
 // import javax.management.IntrospectionException;
 
 public class PetRecordCommunicator {
-	public static String[] FEILD_STRINGS = {"Name","Age","Weight"};
+	public static final String[] FEILD_STRINGS = {"Name","Age","Weight"};
+
+	// Readers
 	public static PetRecord readRecord() {
 		PetRecord record = new PetRecord();
 		Scanner keyboard = new Scanner(System.in);
@@ -51,6 +53,8 @@ public class PetRecordCommunicator {
 			records[x] = PetRecordCommunicator.readRecord();
 		return records;
 	}
+
+	// Writters
 	public static String writeRecords(PetRecord[] records) {
 		String output = "";
 		int[] fieldWidths = {FEILD_STRINGS[0].length(), FEILD_STRINGS[1].length(), FEILD_STRINGS[2].length()};
@@ -91,6 +95,13 @@ public class PetRecordCommunicator {
 			line = String.format(formatString,record.getName(),record.getAge(),record.getWeight());
 			output = output.concat(line);
 		}
+		return output;
+	}
+	public static String writeRecordInfo(PetRecord[] records) {
+		String output = "";
+		
+
+		
 		return output;
 	}
 }
