@@ -1,130 +1,66 @@
-/***
- Class for basic pet records: name, age, and weight.
-*/
-public class PetRecord
-{
-    private String name;
-    private int age;         //in years
-    private double weight;   //in pounds
+import java.io.Serializable;
 
-    public void writeOutput()
-    {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age + " years");
-        System.out.println("Weight: " + weight + " pounds");
+public class PetRecord implements Serializable {
+    private String _name;
+    private int _age;         //in years
+    private double _weight;   //in pounds
+
+    // Constructors
+    public PetRecord() {
+        this("",0,0);
+    }
+    public PetRecord(String name) {
+        this(name,0,0);
+    }
+    public PetRecord(String name, int age, double weight) {
+        // Designated initalizer 
+        setName(name);
+        setAge(age);
+        setWeight(weight);
     }
 
-    public PetRecord(String initialName, int initialAge,
-                                          double initialWeight)
-    {
-        name = initialName;
-        if ((initialAge < 0) || (initialWeight < 0))
-        {
-            System.out.println("Error: Negative age or weight.");
-            System.exit(0);
+    // Setters
+    public void setName(String name) {
+        _name = name; 
+    }
+    public void setAge(int age) {
+        if (age < 0)
+            throw new IllegalArgumentException("Age must be positive.");
+        _age = age;        
+    }
+    public void setWeight(double weight) {
+        if (weight < 0)
+            throw new IllegalArgumentException("Weight must be positive.");
+        _weight = weight;
+    }
+
+    // Getters
+    public String getName() {
+        return _name;
+    }
+    public int getAge() {
+        return _age;
+    }
+    public double getWeight() {
+        return _weight;
+    }
+
+    // Object 
+    public String toString() {
+        return String.format("%s:%s:%s",getName(),getAge(),getWeight());
+    }
+    public boolean equals(Object o) {
+        if (o == null) 
+            return false;
+        else if (o.getClass() != this.getClass())
+            return false;
+        else {
+            PetRecord otherRecord = (PetRecord) o;
+
+            boolean isSameName   = this.getName().equals(otherRecord.getName());
+            boolean isSameAge    = this.getAge() == otherRecord.getAge();
+            boolean isSameWeight = this.getWeight() == otherRecord.getWeight();
+            return isSameName && isSameAge && isSameWeight;
         }
-        else
-        {
-            age = initialAge;
-            weight = initialWeight;
-        }
-    }
-
-    public void set(String newName, int newAge, double newWeight)
-    {
-        name = newName;
-        if ((newAge < 0) || (newWeight < 0))
-        {
-            System.out.println("Error: Negative age or weight.");
-            System.exit(0);
-        }
-        else
-        {
-            age = newAge;
-            weight = newWeight;
-        }
-    }
-
-    public PetRecord(String initialName)
-    {
-        name = initialName;
-        age = 0;
-        weight = 0;
-    }
-
-    public void setName(String newName)
-    {
-        name = newName; 
-    }
-
-    public PetRecord(int initialAge)
-    {
-        name = "No name yet.";
-        weight = 0;
-        if (initialAge < 0)
-        {
-            System.out.println("Error: Negative age.");
-            System.exit(0);
-        }
-        else
-            age = initialAge;
-    }
-
-    public void setAge(int newAge)
-    {
-        if (newAge < 0)
-        {
-            System.out.println("Error: Negative age.");
-            System.exit(0);
-        }
-        else
-            age = newAge;        
-    }
-
-    public PetRecord(double initialWeight)
-    {
-        name = "No name yet";
-        age = 0;
-        if (initialWeight < 0)
-        {
-            System.out.println("Error: Negative weight.");
-            System.exit(0);
-        }
-        else
-            weight = initialWeight;
-    }
-
-    public void setWeight(double newWeight)
-    {
-        if (newWeight < 0)
-        {
-            System.out.println("Error: Negative weight.");
-            System.exit(0);
-        }
-        else
-            weight = newWeight; 
-    }
-
-    public PetRecord()
-    {
-        name = "No name yet.";
-        age = 0;
-        weight = 0;
-    }
-
-    public String getName()
-    {
-        return name;
-    }
-
-    public int getAge()
-    {
-        return age;
-    }
-
-    public double getWeight()
-    {
-        return weight;
     }
 }
-
