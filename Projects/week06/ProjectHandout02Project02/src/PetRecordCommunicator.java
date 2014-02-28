@@ -41,4 +41,10 @@ public class PetRecordCommunicator {
 		keyboard.close();
 		return record; 
 	}
+	public static PetRecord[] readRecords(int count) {
+		PetRecord[] records = new PetRecord[count];
+		for (int x = 0;x < records.length;x++)
+			records[x] = PetRecordCommunicator.readRecord();
+		return records;
+	}
 }
