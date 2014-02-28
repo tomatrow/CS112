@@ -50,9 +50,11 @@ public class PetRecord implements Serializable {
     }
 
     // Object 
+    @Override
     public String toString() {
         return String.format("%s:%s:%s",getName(),getAge(),getWeight());
     }
+    @Override
     public boolean equals(Object o) {
         if (o == null) 
             return false;
