@@ -22,7 +22,6 @@ public class PetRecord implements Serializable {
         setWeight(weight);
     }
 
-
     // Setters
     public void setName(String name) {
         _name = name; 
