@@ -1,12 +1,17 @@
 import java.io.InputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+import java.lang.reflect.Method;
+import java.lang.reflect.InvocationTargetException;
+
 // import java.beans.Introspector;
 // import java.beans.PropertyDescriptor;
 // import javax.management.IntrospectionException;
 
 public class PetRecordCommunicator {
 	public static final String[] FEILD_STRINGS = {"Name","Age","Weight"};
+	public static final String[] QUALITY_STRINGS = {"Smallest","Largest","Youngest","Oldest"};
+	public static final String[] METHOD_STRINGS = {"smallestPets", "largestPets", "youngestPets", "oldestPets"};
 
 	// Readers
 	public static PetRecord readRecord() {
@@ -99,9 +104,28 @@ public class PetRecordCommunicator {
 	}
 	public static String writeRecordInfo(PetRecord[] records) {
 		String output = "";
-		
 
-		
+		try {
+			for (int x = 0;x < QUALITY_STRINGS.length;x++) {
+				Method method = PetRecordManager.class.getMethod(METHOD_STRINGS[x], PetRecord[].class);
+				PetRecord[] qualityRecords = (PetRecord[]) method.invoke(null,(Object)records);
+				String header = QUALITY_STRINGS[x] + " Pet" + ((qualityRecords.length > 1)?"s":"") + ":\n";
+				output = output.concat(header + writeRecords(qualityRecords));
+			}
+		}
+		catch (NoSuchMethodException e) {
+			e.printStackTrace();
+			System.exit(0);
+		}
+		catch (IllegalAccessException e) {
+			e.printStackTrace();
+			System.exit(0);	
+		}
+		catch (InvocationTargetException e) {
+			e.printStackTrace();
+			System.exit(0);	
+		}
+
 		return output;
 	}
 }
