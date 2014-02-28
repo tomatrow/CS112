@@ -1,8 +1,12 @@
 import java.io.InputStream;
 import java.util.Scanner;
+import java.util.Arrays;
+// import java.beans.Introspector;
+// import java.beans.PropertyDescriptor;
+// import javax.management.IntrospectionException;
 
 public class PetRecordCommunicator {
-	public static String[] FEILD_STRINGS = {"name","age","weight"};
+	public static String[] FEILD_STRINGS = {"Name","Age","Weight"};
 	public static PetRecord readRecord() {
 		PetRecord record = new PetRecord();
 		Scanner keyboard = new Scanner(System.in);
@@ -46,5 +50,47 @@ public class PetRecordCommunicator {
 		for (int x = 0;x < records.length;x++)
 			records[x] = PetRecordCommunicator.readRecord();
 		return records;
+	}
+	public static String writeRecords(PetRecord[] records) {
+		String output = "";
+		int[] fieldWidths = {FEILD_STRINGS[0].length(), FEILD_STRINGS[1].length(), FEILD_STRINGS[2].length()};
+
+		
+		// Find out how big each field should be 
+		PetRecord record;
+		int nameLength;   
+		int ageLength;    
+		int weightLength; 
+
+		for (int x = 0;x < records.length;x++) {
+			record = records[x];
+			
+			nameLength   =  record.getName().length();
+			ageLength    =  Integer.toString(record.getAge()).length();
+			weightLength =  Double.toString(record.getWeight()).length();
+			
+			if (nameLength > fieldWidths[0])
+				fieldWidths[0] = nameLength;
+			if (ageLength > fieldWidths[1])
+				fieldWidths[1] = ageLength;
+			if (weightLength > fieldWidths[2])
+				fieldWidths[2] = weightLength;
+		}
+
+		// Generate output string
+		String formatString = "|%-" + fieldWidths[0] + "s" + "|" + "%-" + fieldWidths[1] + "s" + "|" + "%-" + fieldWidths[2] + "s|\n";
+		String line;
+		
+		// output header 
+		line = String.format(formatString,FEILD_STRINGS[0],FEILD_STRINGS[1],FEILD_STRINGS[2]);
+		output = output.concat(line);
+
+		// output body 
+		for (int x = 0;x < records.length;x++) {
+			record = records[x];
+			line = String.format(formatString,record.getName(),record.getAge(),record.getWeight());
+			output = output.concat(line);
+		}
+		return output;
 	}
 }
