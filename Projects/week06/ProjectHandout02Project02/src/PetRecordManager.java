@@ -1,18 +1,71 @@
+import java.io.ObjectOutputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.io.File;
+
 import java.util.Arrays;
 import java.util.List;
 
 public class PetRecordManager {
+	public static final String RECORD_FILE_NAME = "PetRecords.dat";
+	public static final File RECORD_FILE = new File(System.getenv("PWD") + "/bld/" + RECORD_FILE_NAME);
 	private PetRecord[] _records; 
 
 	PetRecordManager() {
 		// This needs to be zero 
 		_records = new PetRecord[0];
+		if (!RECORD_FILE.exists()) {
+			archive();
+			// try {
+			// 	RECORD_FILE.createNewFile();
+			// } 
+			// catch (IOException e) {
+			// 	System.out.println("Can't create a file");
+			// 	e.printStackTrace();
+			// 	System.exit(0);
+			// }
+		}
 	}
 
-
-
 	// serialization
-
+	// It's amazing how easy this is in java
+	public void archive() {
+		try {
+			ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(RECORD_FILE));
+			outputStream.writeObject(_records);
+			outputStream.close();
+		} 
+		catch (IOException e) {
+			System.out.println("Shoot Dawg");
+			e.printStackTrace();
+			System.exit(0);
+		}
+	}
+	public void unarchive() {
+		try {
+			ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(RECORD_FILE));
+			setRecords((PetRecord[])inputStream.readObject());
+			inputStream.close();
+		} 
+		catch (FileNotFoundException e) {
+			System.out.println("Shoot Dawg");
+			e.printStackTrace();
+			System.exit(0);
+		}
+		catch (ClassNotFoundException e) {
+			System.out.println("Shoot Dawg");
+			e.printStackTrace();
+			System.exit(0);
+		}
+		catch (IOException e) {
+			System.out.println("Shoot Dawg");
+			e.printStackTrace();
+			System.exit(0);
+		}
+	}
 
 	// records information (extreme code copying, watch out)
 	public static PetRecord[] smallestPets(PetRecord[] records) {
