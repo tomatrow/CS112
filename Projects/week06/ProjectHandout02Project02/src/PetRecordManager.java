@@ -147,11 +147,14 @@ public class PetRecordManager {
 
 
 	// boiler
-	public void add(PetRecord record) {
+	public void addRecord(PetRecord record) {
 		// List<PetRecord> l = Arrays.asList(_records);
 		// l.add(record);
 		// setRecords(Arrays.copyOf(l.toArray(),l.size(),PetRecord[].class));
 		setRecords(PetRecordManager.append(_records,record));
+	}
+	public void addRecords(PetRecord[] records) {
+		setRecords(PetRecordManager.concat(_records,records));
 	}
 	public void remove(PetRecord record) {
 		int recordIndex = -1;
