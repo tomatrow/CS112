@@ -1,8 +1,21 @@
 /*
+File Name:          ProjectHandout02Project02.java
+Programmer:         Andrew Caldwell
+Date Last Modified: Feb. 28, 2014
 
+Problem Statement:
+Make a pet record mutator. 
 
+Overall Plan:
+Rewrite model to my style, make a pet record io class. 
+Make a store/info class
+use them in main
 
-
+Classes needed and Purpose:
+main class - ProjectHandout02Project02
+PetRecord - holding pet data
+PetRecordManager - Info and storage for an array of pet records
+PetRecordCommunicatior - reads and displays records 
 
 - - - - - - - - 
 
