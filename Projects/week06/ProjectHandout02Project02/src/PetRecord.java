@@ -12,12 +12,16 @@ public class PetRecord implements Serializable {
     public PetRecord(String name) {
         this(name,0,0);
     }
+    public PetRecord(PetRecord petRecord) {
+        this(petRecord.getName(),petRecord.getAge(),petRecord.getWeight());
+    }
     public PetRecord(String name, int age, double weight) {
         // Designated initalizer 
         setName(name);
         setAge(age);
         setWeight(weight);
     }
+
 
     // Setters
     public void setName(String name) {
@@ -62,5 +66,10 @@ public class PetRecord implements Serializable {
             boolean isSameWeight = this.getWeight() == otherRecord.getWeight();
             return isSameName && isSameAge && isSameWeight;
         }
+    }
+    
+    // Convenience
+    public PetRecord copy() {
+        return new PetRecord(this);
     }
 }
