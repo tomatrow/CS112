@@ -31,7 +31,7 @@ Final Flow Plan Start
 Final Flow Plan End
 
 ClassPlan Start
-	@Chapter10Project11 # Main Class
+	@ProjectHandout02Project02 # Main Class
 	@PetRecord # our model
 	@PetRecordManager #IO and info about our petrecords
 		*petRecords #array of pets
@@ -51,7 +51,7 @@ ClassPlan Start
 ClassPlan End
 */
 
-public class Chapter10Project11 {
+public class ProjectHandout02Project02 {
 	public static void main(String[] args) {
 		System.out.println("Hello World!");
 	}
