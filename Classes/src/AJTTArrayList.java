@@ -12,7 +12,10 @@ public class AJTTArrayList <T> {
 	AJTTArrayList(T[] array) {
 		_array = array;
 	}
-	
+	AJTTArrayList(AJTTArrayList<T> arrayList) {
+		this(arrayList.toArray());
+	}
+
 	// single object operations
 	public T get(int index) {
 		if (!(index < _array.length))
@@ -31,13 +34,35 @@ public class AJTTArrayList <T> {
 	}
 	public void remove(int index) {
 		if (AJTTArrayList.isValidIndex(_array,index))
-			AJTTArrayList.remove(_array,index);
+		    _array = AJTTArrayList.remove(_array,index);
 		else 
 			throw new ArrayIndexOutOfBoundsException();
 	}
 	public void remove(T object) {
 		remove(AJTTArrayList.indexOf(_array,object));
 	}
+
+	// Public methods
+	public int length() {
+		return _array.length;
+	}
+	public T[] toArray() {
+		@SuppressWarnings("unchecked")
+        final T[] t = (T[]) _array;
+		return Arrays.copyOf(t,t.length);
+	}
+
+	// Object overrides 
+	@overide
+	public boolean equals(AJTTArrayList <T> arrayList) {
+		boolean isSameArray = Arrays.equals(arrayList.toArray(),(T[])this._array);
+		return isSameArray;
+	}
+	public AJTTArrayList copy() {
+		return new AJTTArrayList(this);
+	}
+
+
 
 	// Private helper methods 
 	private static <T> T[] concat(T[] first, T[] second) {
