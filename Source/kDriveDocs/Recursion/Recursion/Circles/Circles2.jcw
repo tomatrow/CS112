@@ -1,0 +1,16 @@
+<?xml?>
+<workspace>
+	<settings>
+		<label>Circles</label>
+	</settings>
+	<users>
+		<user>
+			<path>Circles2.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>Circles.jcp</path>
+		</project>
+	</projects>
+</workspace>

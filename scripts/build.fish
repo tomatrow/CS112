@@ -18,14 +18,15 @@ set SOURCE_FILE_PATH ./src/source.txt
 
 
 function masterbuild 
-	touch SOURCE_FILE_PATH
+	touch $SOURCE_FILE_PATH
 	echo $SRC_FILES > $SOURCE_FILE_PATH
 	echo $HELP_SRC_FILES >> $SOURCE_FILE_PATH
-
+	
 	if test -e $SRC_DIR -a -e $BLD_DIR # make sure project is initialized
 		if test $argv = "build" 
 			javac -d $BLD_DIR @$SOURCE_FILE_PATH
-			codemark $SRC_DIR/$MAIN_CLASS $SRC_FILES > $BLD_DIR/$PROJECT_NAME.md
+			# codemark $SRC_FILES $SRC_DIR/$MAIN_CLASS > $BLD_DIR/$PROJECT_NAME.md
+			# echo $SRC_FILES $SRC_DIR/$MAIN_CLASS 
 		else if test $argv = "run"
 		    java -cp $BLD_DIR:$HELP_BLD_DIR $PROJECT_NAME
 		else if test $argv = "shoot"

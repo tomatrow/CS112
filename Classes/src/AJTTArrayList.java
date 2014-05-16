@@ -53,7 +53,7 @@ public class AJTTArrayList <T> {
 	}
 
 	// Object overrides 
-	@overide
+	// @override
 	public boolean equals(AJTTArrayList <T> arrayList) {
 		boolean isSameArray = Arrays.equals(arrayList.toArray(),(T[])this._array);
 		return isSameArray;

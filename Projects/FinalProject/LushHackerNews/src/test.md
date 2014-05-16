@@ -1,0 +1,1 @@
+<html><meta http-equiv="refresh" content="0; URL=/cgi-bin/redirect.ha" /><title>AT&T GUI</title><body></body></html>

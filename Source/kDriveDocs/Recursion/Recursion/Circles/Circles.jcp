@@ -1,0 +1,44 @@
+<?xml?>
+<project>
+	<settings>
+		<label>Circles</label>
+		<root_path>\</root_path>
+		<output_path>C:\CS112 - K Fall10\Recursion\Circles\classes\</output_path>
+		<source_path>C:\CS112 - K Fall10\Recursion\Circles\src\</source_path>
+		<jdkprofile_ref>JDK version 1.6.0_02</jdkprofile_ref>
+		<compiler_ref/>
+		<ant_ref/>
+	</settings>
+	<runtimes>
+		<runtime>
+			<label>&lt;Default&gt;</label>
+			<application_ref/>
+			<applet_ref/>
+			<debugger_ref/>
+			<param/>
+			<run>classes\Circles.htm</run>
+		</runtime>
+	</runtimes>
+	<libraries/>
+	<files>
+		<include>
+			<folderitem>
+				<path>classes</path>
+			</folderitem>
+			<folderitem>
+				<path>src</path>
+			</folderitem>
+			<fileitem>
+				<path>classes\Circles.htm</path>
+				<url>classes\Circles.htm</url>
+				<source>false</source>
+				<browser>true</browser>
+			</fileitem>
+			<fileitem>
+				<path>src\Circles.java</path>
+				<source>false</source>
+			</fileitem>
+		</include>
+	</files>
+	<tasks/>
+</project>

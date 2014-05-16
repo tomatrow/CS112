@@ -14,7 +14,7 @@ public class OutputTextFileAppend
 {
    public static void main(String[] args)
    {
-    char repeatAnswer = 'Y';
+      char repeatAnswer = 'Y';
 	  Scanner keyboard = new Scanner(System.in);  //Scanner for input
    	
       //Create object(stream) for output using the FileOutputStream class
@@ -57,6 +57,7 @@ public class OutputTextFileAppend
    	      System.out.println("Enter 'y' for yes or n for 'no'");
    	      repeatAnswer = keyboard.next().charAt(0);
       }
+
       
       //Close output file
       outputStream.close();
