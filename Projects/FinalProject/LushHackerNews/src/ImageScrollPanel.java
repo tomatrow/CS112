@@ -49,7 +49,6 @@ public class ImageScrollPanel extends JScrollPane {
 			}
 			public void mouseReleased(MouseEvent event) {
 			}
-
 		};
 	}
 }

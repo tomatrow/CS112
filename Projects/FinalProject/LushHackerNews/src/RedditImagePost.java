@@ -101,5 +101,4 @@ public class RedditImagePost implements Serializable {
 	public int hashCode() {
 		return getPermalink().hashCode() ^ getTitle().hashCode() ^ getCreated().hashCode() ^ getAuthor().hashCode() ;
 	}
-
 }
